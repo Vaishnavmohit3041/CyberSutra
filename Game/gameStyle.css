@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #000d1a 0%, #001f33 100%);
+      color: #ffffff;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .level-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 30px 0;
+      font-size: 18px;
+      color: #00f7ff;
+      text-shadow: 0 0 5px #00f7ff;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 46px;
+      margin: 30px 0 30px;
+      color: white;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    .game-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 50px;
+    }
+
+    .question-box {
+      background: rgba(0, 247, 255, 0.05);
+      border: 1px solid #00f7ff33;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px #00f7ff22;
+      margin-top: 100px;
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .question-box.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .question-box p {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    /* Animation for the options to grow from small to large */
+    @keyframes growFromSmall {
+      from {
+        transform: scale(0.2);
+        /* Start smaller */
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        /* End at normal size */
+        opacity: 1;
+      }
+    }
+
+    .option {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: rgba(0, 255, 255, 0.07);
+      border: 2px solid #00f7ff77;
+      color: white;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      animation: growFromSmall 1s ease-out;
+      animation-delay: 0.001s;
+      transition: transform 1s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover effect for options */
+    .option:hover {
+      background: rgba(0, 247, 255, 0.2);
+      box-shadow: 0 0 15px #00f7ff99;
+      /* Border shadow on hover */
+      transform: scale(1.1);
+      /* Increase size on hover */
+      transition: 0.3s;
+    }
+
+    .correct {
+      background-color: rgba(0, 255, 150, 0.3);
+      border-color: #00ffaa;
+    }
+
+    .wrong {
+      background-color: rgba(255, 50, 80, 0.3);
+      border-color: #ff0033;
+    }
+
+    .congrats {
+      text-align: center;
+      padding: 100px 20px;
+      font-size: 28px;
+      color: #00f7ff;
+      text-shadow: 0 0 12px #00f7ff, 0 0 24px #00f7ff;
+    }
+
+    .congrats h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .congrats p {
+      font-size: 22px;
+    }

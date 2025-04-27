@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+header {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+header h1 {
+  font-size: 3rem;
+  color: #00f7ff;
+  animation: glow 2s infinite alternate;
+}
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #ddd;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  }
+  to {
+    text-shadow: 0 0 20px #0ff, 0 0 30px #0ff;
+  }
+}
+.section {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+a{
+text-decoration: none;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 280px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 247, 255, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0, 247, 255, 0.6);
+}
+.card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.4);
+}
+.card h3 {
+  color: #00f7ff;
+  margin-bottom: 1rem;
+}
+.card p {
+  color: #c2f9ff;
+  font-size: 0.95rem;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #000;
+  font-size: 0.9rem;
+  color: white;
+}

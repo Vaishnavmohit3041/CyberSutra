@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CyberSutra</title>
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <link rel="stylesheet" href="./code.css">
+    <link rel="icon" href="../security2.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <h1>QR Code Scanner</h1>
+        <p>Scan or Upload your QR Code easily!</p>
+    </header>
+
+    <main>
+        <br><br>
+        <div style="margin-left: 30px;">
+            <h2 style="color: aqua;">Note:</h2>
+            <p style="font-size: 20px;">
+                After scanning, copy the result and check it with a malware detection to ensure it's safe.
+            </p>
+        </div>
+        <section class="section">
+            <div class="card" onclick="startCamera()">
+                <img src="./media/camera.png" alt="Camera Icon" class="card-icon">
+                <h3>Scan Using Camera</h3>
+                <p>Scan QR codes using your device's camera.</p>
+            </div>
+
+            <div class="card" onclick="triggerFileInput()">
+                <img src="./media/upload.png" alt="Upload Icon" class="card-icon">
+                <h3>Upload an Image</h3>
+                <p>Upload an image containing a QR code.</p>
+            </div>
+        </section>
+
+        <input type="file" id="file-input" accept="image/*" onchange="scanFromFile()" style="display:none;">
+
+        <div id="reader"></div>
+
+        <div id="result" class="result"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CyberQuest. Designed with ❤️ by Mohit Vaishnav.</p>
+    </footer>
+
+    <script src="./code.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+
+</body>
+
+</html>
